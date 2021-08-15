@@ -1,7 +1,7 @@
 var lumberjack, bg, bgImg;
 var logGroup,foxGroup;
 var log,logImg, fox, foxImg, running, standing;
-var gameOver,reset,resetImg, startbg,keyImg;
+var gameOver,reset,resetImg, startbg;
 var PLAY = 1;
 var END = 0;
 var START = 2
@@ -17,7 +17,7 @@ function preload(){
   gameOver = loadImage("GameOver.png");
   resetImg = loadImage("Reset.png");
   startbg = loadImage("start.jpg");
-  keyImg = loadImage("Keys.png");
+ 
 }
 
 function setup(){
@@ -60,9 +60,9 @@ function draw(){
    
     text("Help the Lumberjack!",70,150)
     textSize(20);
-    //text("Use Left and Right Arrow keys to move\nthe lumberjack left and right.\nUse your Up and Down arrow keys to\nzoom in and out of your game.",55,160)
+    text("Use Left and Right Arrow keys to move\nthe lumberjack left and right.\nUse your Up and Down arrow keys to\nzoom in and out of your game.",35,180)
     text("Press Spacebar to start the game!",55,460);
-    image(keyImg, 280,300,100,150)
+    
     if(keyDown("space")){
       gameState = 1;
     }
